@@ -466,14 +466,15 @@ opacity: 0.8; /* Reduce opacity slightly */
     no-repeat ;
   background-size: contain;
   z-index: 16;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+  transform-origin: center;
 }
 
-.pits-carwash-logo-nobg:hover{
-  width: 35%;
-  height: 50%;
+.pits-carwash-logo-nobg:hover {
+  transform: scale(1.1); /* Grows the logo towards the viewer */
   opacity: 0.8;
-  filter: brightness(1.2);}
+  filter: brightness(1.2);
+}
 
 .text {
   display: flex;
