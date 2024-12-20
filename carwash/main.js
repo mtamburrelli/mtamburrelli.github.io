@@ -24,3 +24,53 @@ document.querySelector('.ham-menu').addEventListener('click', function() {
   this.classList.toggle('active');
   document.querySelector('.off-screen-menu').classList.toggle('active');
 });
+
+let currentSlide = 0;
+
+function slideReviews(direction) {
+    const slider = document.querySelector('.reviews-grid');
+    const cards = document.querySelectorAll('.review-card');
+    const cardsPerView = window.innerWidth <= 768 ? 1 : 2;
+    const totalSlides = Math.ceil(cards.length / cardsPerView);
+    
+    if (direction === 'next') {
+        currentSlide = (currentSlide + 1) % totalSlides;
+    } else {
+        currentSlide = currentSlide === 0 ? totalSlides - 1 : currentSlide - 1;
+    }
+    
+    const slideWidth = (100 / cardsPerView);
+    slider.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
+}
+
+// Reset position on window resize
+window.addEventListener('resize', () => {
+    currentSlide = 0;
+    document.querySelector('.reviews-grid').style.transform = 'translateX(0)';
+});
+
+
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Create the Intersection Observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // If the element is in view
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal');
+                // Stop observing after animation
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2 // Trigger when 20% of the element is visible
+    });
+
+    // Get all elements with scroll-reveal class
+    const scrollElements = document.querySelectorAll('.scroll-reveal');
+    
+    // Observe each element
+    scrollElements.forEach((element) => {
+        observer.observe(element);
+    });
+});
