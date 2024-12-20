@@ -50,27 +50,3 @@ window.addEventListener('resize', () => {
 });
 
 
-// Wait for the DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-    // Create the Intersection Observer
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            // If the element is in view
-            if (entry.isIntersecting) {
-                entry.target.classList.add('reveal');
-                // Stop observing after animation
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.2 // Trigger when 20% of the element is visible
-    });
-
-    // Get all elements with scroll-reveal class
-    const scrollElements = document.querySelectorAll('.scroll-reveal');
-    
-    // Observe each element
-    scrollElements.forEach((element) => {
-        observer.observe(element);
-    });
-});
