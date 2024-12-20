@@ -21,6 +21,42 @@ body {
     margin: 0 auto;
 }
 
+.logo {
+    margin-bottom: 4rem;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    /* If you want to make sure the image is exactly as uploaded */
+    object-fit: contain;
+}
+
+/* In case the image doesn't load, this will be the fallback */
+.logo-fallback {
+    width: 150px;
+    height: 60px;
+    background-color: #ff3333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Stencil Std', fantasy;
+    color: white;
+}
+
+
+.logo-placeholder {
+    width: 150px;
+    height: 60px;
+    background-color: #ff3333;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Stencil Std', fantasy;
+    color: white;
+}
+
 .restaurants-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
