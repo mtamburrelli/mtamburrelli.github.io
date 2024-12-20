@@ -5,6 +5,10 @@
     "Source Han Sans CN", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
