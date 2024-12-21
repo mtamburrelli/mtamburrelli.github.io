@@ -125,8 +125,8 @@ button {
 }
 .blob {
   position: absolute;
-  width: 200px;
-  height: 100px;
+  width: 150px;
+  height: 85px;
   top: 0;
   left: 0;
   z-index: 1;
@@ -136,7 +136,7 @@ button {
 }
 
 .blob-text{
-  position: absolute; /* Allows positioning within the container */
+  position: relative; /* Allows positioning within the container */
   top: 50%; /* Center vertically */
   left: 50%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Adjusts for text's own dimensions */
@@ -185,8 +185,8 @@ opacity: 0.8; /* Reduce opacity slightly */
 }
 .blob-2 {
   position: absolute;
-  width: 200px;
-  height: 100px;
+  width: 150px;
+  height: 85px;
   top: 0;
   left: 761px;
   z-index: 23;
