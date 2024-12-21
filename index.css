@@ -126,12 +126,13 @@ button {
 .blob {
   position: absolute;
   width: 200px;
-  height: 200px;
+  height: 100px;
   top: 0;
   left: 0;
   z-index: 1;
   overflow: hidden;
-
+  background-color: #c20303;
+  border-radius: 2dvh;
 }
 
 .blob-text{
@@ -150,17 +151,6 @@ button {
 .blob:hover{
 filter: brightness(1.5); /* Increase brightness */
 opacity: 0.8; /* Reduce opacity slightly */
-}
-
-.vector {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: url(./assets/images/ee1e581c-05b2-4202-b7e0-a8350e0a8ae7.png) no-repeat center;
-  background-size: cover; /* Use cover to ensure it fills the blob's area */
-  z-index: 1; /* Ensure it's below the text */
 }
 
 .button {
@@ -196,14 +186,14 @@ opacity: 0.8; /* Reduce opacity slightly */
 .blob-2 {
   position: absolute;
   width: 200px;
-  height: 200px;
+  height: 100px;
   top: 0;
   left: 761px;
   z-index: 23;
   overflow: hidden;
   transition: all 0.3s ease;
-
-
+  background-color: #c20303;
+  border-radius: 2dvh;
 }
 
 .blob-2:hover{
@@ -211,15 +201,6 @@ opacity: 0.8; /* Reduce opacity slightly */
   opacity: 0.8; /* Reduce opacity slightly */
   }
 
-.vector-2{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: url(./assets/images/388a9f1e-f2d5-4993-9a54-62812063783a.png) no-repeat center center;
-  background-size:contain; /* Ensures the image covers the blob area */
-  z-index: 1; /* Image is below the text */}
 
 
 .button-3 {
@@ -275,32 +256,6 @@ opacity: 0.8; /* Reduce opacity slightly */
   z-index: 31;
   overflow: visible; /* Allow the blob to grow beyond the parent's bounds */
 }
-.blob-5 {
-  position: absolute;
-  width: 230px;
-  height: 200px;
-  top: 0;
-  left: 202px;
-  z-index: 6;
-  overflow: visible;
-  transition: width 0.3s ease, height 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
-}
-
-.vector-5{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: url(./assets/images/388a9f1e-f2d5-4993-9a54-62812063783a.png) no-repeat center center;
-  background-size:contain; /* Ensures the image covers the blob area */
-  z-index: 1; /* Image is below the text */}
-
-
- .blob-5:hover {
-  filter: brightness(1.5);
-  opacity: 0.8;
-}
 
 .flex-row-c {
   position: relative;
@@ -335,8 +290,6 @@ opacity: 0.8; /* Reduce opacity slightly */
   height: 100%;
   top: 0;
   left: 0;
-  background: url(./assets/images/ee1e581c-05b2-4202-b7e0-a8350e0a8ae7.png)
-    no-repeat center;
   background-size: 100% 100%;
   z-index: 7;
 }
@@ -367,7 +320,6 @@ opacity: 0.8; /* Reduce opacity slightly */
   left: 24.84%;
   cursor: pointer;
   background: transparent;
-  background:url(./assets/images/58a3b7a1-642d-4bd5-a866-59727c589b78.png);
   background-size: 100% 100%;
   border: none;
   z-index: 1;
@@ -544,7 +496,7 @@ background-size: cover;
 margin-top: auto; /* Pushes the image to the bottom */
 z-index: 15;}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {}
   .welcome {
     font-size: 32px;
     width: 90%;
