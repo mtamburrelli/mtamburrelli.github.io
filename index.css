@@ -124,9 +124,10 @@ button {
   z-index: 23;
 }
 .blob {
-  position: absolute;
-  width: 150px;
-  height: 85px;
+  position: absolute; /* Ensures child `.blob-text` is positioned relative to this */
+  width: 165px; /* Example width */
+  height: 100px; /* Example height */
+  display: inline-block; /* Optional, depending on your layout */
   top: 0;
   left: 0;
   z-index: 1;
@@ -135,17 +136,17 @@ button {
   border-radius: 2dvh;
 }
 
-.blob-text{
-  position: relative; /* Allows positioning within the container */
+.blob-text {
+  position: absolute; /* Ensures positioning relative to the nearest positioned ancestor */
   top: 50%; /* Center vertically */
   left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjusts for text's own dimensions */
+  transform: translate(-50%, -50%); /* Adjust for the text's own dimensions */
   color: white; /* Ensure text contrasts with the blob */
   font-size: 1.5rem;
   font-weight: bold;
   z-index: 2; /* Ensures text is above the blob */
   pointer-events: none; /* Prevents text from interfering with hover effects */
-  white-space: nowrap;
+  white-space: nowrap; /* Prevents text from wrapping */
 }
 
 .blob:hover{
@@ -184,9 +185,10 @@ opacity: 0.8; /* Reduce opacity slightly */
   z-index: 21;
 }
 .blob-2 {
-  position: absolute;
-  width: 150px;
-  height: 85px;
+  position: absolute; /* Ensures child `.blob-text` is positioned relative to this */
+  width: 165px; /* Example width */
+  height: 100px; /* Example height */
+  display: inline-block; /* Optional, depending on your layout */
   top: 0;
   left: 761px;
   z-index: 23;
@@ -201,8 +203,6 @@ opacity: 0.8; /* Reduce opacity slightly */
   opacity: 0.8; /* Reduce opacity slightly */
   }
 
-
-
 .button-3 {
   position: absolute;
   width: 74.73%;
@@ -216,25 +216,28 @@ opacity: 0.8; /* Reduce opacity slightly */
   border: none;
   z-index: 24;
 }
+
 .span-4 {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center; /* Vertically centers content within the flex container */
+  justify-content: center; /* Horizontally centers content within the flex container */
   position: absolute;
-  width: 55.5%;
-  height: 14%;
-  top: 42.5%;
-  left: 26%;
+  width: 42%;
+  height: 10%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Adjusts for exact centering */
   color: #ffffff;
-  font-family: Saira Stencil One, var(--default-font-family);
+  font-family: Allerta Stencil, var(--default-font-family);
   font-size: 18px;
   font-weight: 400;
-  line-height: 23.01px;
+  line-height: 20px;
   text-align: center;
   white-space: nowrap;
   letter-spacing: 0.9px;
-  z-index: 25;
+  z-index: 4;
 }
+
 .pits-logo {
   position: absolute;
   width: 477px;
@@ -266,6 +269,7 @@ opacity: 0.8; /* Reduce opacity slightly */
   z-index: 8;
   overflow: visible auto;
 }
+
 .promos {
   display: flex;
   align-items: flex-start;
@@ -284,6 +288,7 @@ opacity: 0.8; /* Reduce opacity slightly */
   letter-spacing: 0.9px;
   z-index: 8;
 }
+
 .vector {
   position: absolute;
   width: 100%;
@@ -293,6 +298,7 @@ opacity: 0.8; /* Reduce opacity slightly */
   background-size: 100% 100%;
   z-index: 7;
 }
+
 .frame-6 {
   position: relative;
   width: 41px;
@@ -301,6 +307,7 @@ opacity: 0.8; /* Reduce opacity slightly */
   z-index: 9;
   overflow: hidden;
 }
+
 .blob-7 {
   position: absolute;
   width: 200px;
@@ -312,6 +319,7 @@ opacity: 0.8; /* Reduce opacity slightly */
   transition: all 0.3s ease;
 
 }
+
 .vector-8 {
   position: absolute;
   width: 65.2%;
@@ -332,13 +340,14 @@ opacity: 0.8; /* Reduce opacity slightly */
 
 .blog {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center; /* Vertically centers content within the flex container */
+  justify-content: center; /* Horizontally centers content within the flex container */
   position: absolute;
   width: 42%;
   height: 10%;
-  top: 45%;
-  left: 36.5%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Adjusts for exact centering */
   color: #ffffff;
   font-family: Allerta Stencil, var(--default-font-family);
   font-size: 18px;
@@ -349,6 +358,7 @@ opacity: 0.8; /* Reduce opacity slightly */
   letter-spacing: 0.9px;
   z-index: 4;
 }
+
 .welcome {
   display: flex;
   align-items: flex-start;
@@ -370,6 +380,7 @@ opacity: 0.8; /* Reduce opacity slightly */
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   -webkit-text-stroke: 5px #000000;
 }
+
 .car-wash {
   display: flex;
   align-items: flex-start;
@@ -388,6 +399,7 @@ opacity: 0.8; /* Reduce opacity slightly */
   letter-spacing: 0.95px;
   z-index: 27;
 }
+
 .arrow-down {
   position: absolute;
   width: 31px;
@@ -400,6 +412,7 @@ opacity: 0.8; /* Reduce opacity slightly */
   box-sizing: content-box;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
+
 .icon-9 {
   position: relative;
   width: 17.181px;
@@ -410,6 +423,7 @@ opacity: 0.8; /* Reduce opacity slightly */
   background-size: 100% 100%;
   z-index: 32;
 }
+
 .group {
   position: absolute;
   width: 2.18%;
@@ -421,6 +435,7 @@ opacity: 0.8; /* Reduce opacity slightly */
   background-size: 100% 100%;
   z-index: 10;
 }
+
 .carwash-bg {
   position: absolute;
   width:100%;
@@ -433,6 +448,7 @@ opacity: 0.8; /* Reduce opacity slightly */
   background-size: cover;
   z-index: 15;
 }
+
 .pits-carwash-logo-nobg {
   position: absolute;
   width: 33%;
@@ -470,6 +486,7 @@ opacity: 0.8; /* Reduce opacity slightly */
   white-space: nowrap;
   z-index: 13;
 }
+
 .car-wash-and-detailing {
   display: flex;
   align-items: flex-start;
@@ -487,6 +504,7 @@ opacity: 0.8; /* Reduce opacity slightly */
   text-align: center;
   z-index: 17;
 }
+
 .carwash-bg{
 position: relative; /* Keeps it within the flow of the page */
 width: 100%; /* Full width */

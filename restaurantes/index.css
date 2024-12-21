@@ -6,11 +6,13 @@
 }
 
 h1{
-color:white;
-text-align: center;
-font-family: 'Allerta Stencil';
+    color:white;
+    text-align: center;
+    font-family: 'Allerta Stencil';
 }
+
 body {
+    font-family: 'Allerta Stencil';
     background-color: #121212;
     min-height: 100vh;
     padding: 2rem;
