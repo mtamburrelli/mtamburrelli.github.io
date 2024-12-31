@@ -6,9 +6,13 @@
 
 html, body {
     width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    height: 100vh;
+    overflow: auto;
+    background-color: #000000;
+    background-image: url(../assets/images/6027.jpg);
+    background-size: cover; /* Adjusts the image to cover the screen */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    background-position: center; /* Centers the image */
 }
 
 :root {
@@ -36,7 +40,6 @@ button {
   height: 1749px;
   margin: 0 auto;
   background: #ffffff;
-  overflow: hidden;
 }
 .flex-row {
   position: relative;
@@ -293,7 +296,7 @@ button {
   min-height: 40vh; /* Reduced from 100vh */
   background: #000000;
   position: relative;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .gallery-title {
@@ -322,7 +325,7 @@ button {
   height: 337.5px; /* 16:9 aspect ratio for 600px width */
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
+  overflow: auto;
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(255, 0, 0, 0.1);
 }
@@ -443,7 +446,7 @@ button {
   letter-spacing: 2px;
   color: #ffffff;
   transition: all 0.3s ease;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .btn-content {
